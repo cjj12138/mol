@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exam.demo.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.exam.demo.entity.User">
+        <id column="Userid" jdbcType="INTEGER" property="userid" />
+        <result column="Username" jdbcType="VARCHAR" property="username" />
+        <result column="Password" jdbcType="VARCHAR" property="password" />
+    </resultMap>
+    <select id="checkuser" resultType="com.exam.demo.entity.User">
+      select * from user where Username=1 and Password=1
+    </select>
+    <insert id="registe" parameterType="com.exam.demo.entity.User">
+        insert into user(Username,Password) value (#{username},#{pwd})
+    </insert>
+    <select id="checkusername" resultType="com.exam.demo.entity.User">
+        select * from user where Username=#{username}
+    </select>
+</mapper>
