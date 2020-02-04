@@ -1,4 +1,4 @@
-package com.exam.demo.Service;
+package com.exam.demo.Service.Serviceimplement;
 
 import com.exam.demo.entity.User;
 import com.exam.demo.mapper.UserMapper;
@@ -7,11 +7,9 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class TestService {
+public class TestServiceImp{
     @Autowired
     UserMapper userMapper;
 
-    public User check(){
-        return userMapper.checkuser();
-    }
+
 }
