@@ -23,12 +23,4 @@ public class UserController {
         System.out.println(login.toString());
         return "hello,world!";
     }
-
-    @RequestMapping(value = "upload")
-    public String upload(HttpServletRequest request, MultipartFile file){
-        System.out.println("收到上传请求");
-        String fileName=file.getOriginalFilename();
-        System.out.println(fileName);
-        return "";
-    }
 }
